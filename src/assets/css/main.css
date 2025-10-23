@@ -17,5 +17,6 @@
 @import url('cards.css');
 @import url('toast.css');
 @import url('keyboard-shortcuts.css');
-@import url('bulk-operations.css');
 @import url('enhanced-search.css');
+@import url('quick-filters.css');
+@import url('ui-polish.css');

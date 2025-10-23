@@ -85,10 +85,45 @@
           </select>
         </label>
         
-        <div class="filters-panel__actions">
-          <button class="btn btn--ghost" data-action="toggle-bulk-mode" type="button" title="Toggle bulk selection mode">
-            ☑️ Bulk Select
+        <!-- Quick Filters -->
+        <div class="quick-filters">
+          <span class="quick-filters__label">Quick Filters:</span>
+          <div class="quick-filters__group">
+            <button class="filter-chip" data-quick-filter="pending" type="button">
+              <span class="filter-chip__icon">⏳</span>
+              Pending
+            </button>
+            <button class="filter-chip" data-quick-filter="completed" type="button">
+              <span class="filter-chip__icon">✅</span>
+              Completed
+            </button>
+            <button class="filter-chip" data-quick-filter="partial" type="button">
+              <span class="filter-chip__icon">⚡</span>
+              In Progress
+            </button>
+          </div>
+          <span class="quick-filters__divider"></span>
+          <div class="quick-filters__group">
+            <button class="filter-chip" data-quick-filter="work" type="button">
+              <span class="filter-chip__icon">💼</span>
+              Work
+            </button>
+            <button class="filter-chip" data-quick-filter="personal" type="button">
+              <span class="filter-chip__icon">👤</span>
+              Personal
+            </button>
+            <button class="filter-chip" data-quick-filter="priority" type="button">
+              <span class="filter-chip__icon">⭐</span>
+              Priority
+            </button>
+          </div>
+          <button class="quick-filters__clear" data-action="clear-filters" type="button">
+            Clear Filters
           </button>
+          <span class="quick-filters__count"></span>
+        </div>
+        
+        <div class="filters-panel__actions">
           <button class="btn btn--ghost" data-action="reset-day" type="button">
             Reset Today
           </button>

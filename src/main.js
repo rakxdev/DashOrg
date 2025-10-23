@@ -10,8 +10,8 @@ import { sitesService } from './features/sites/sites.service.js';
 import { credentialsService } from './features/credentials/credentials.service.js';
 import { analyticsService } from './features/analytics/analytics.service.js';
 import { keyboardShortcuts } from './features/keyboard/keyboard-shortcuts.service.js';
-import { bulkOperations } from './features/bulk/bulk-operations.service.js';
 import { enhancedSearch } from './features/search/enhanced-search.service.js';
+import { quickFilters } from './features/filters/quick-filters.service.js';
 import { toast } from './shared/components/toast.js';
 import { formatDate, debounce } from './shared/constants.js';
 import { ComponentLoader } from './utils/component-loader.js';
@@ -41,11 +41,11 @@ class App {
       // Render initial UI
       this.render();
       
-      // Attach event listeners
-      this.attachEventListeners();
-      
       // Setup modal listeners
       this.setupModalListeners();
+      
+      // Attach event listeners
+      this.attachEventListeners();
       
       // Subscribe to state changes
       this.subscribeToEvents();
@@ -53,11 +53,11 @@ class App {
       // Initialize keyboard shortcuts
       keyboardShortcuts.init();
       
-      // Initialize bulk operations
-      bulkOperations.init();
-      
       // Initialize enhanced search
       enhancedSearch.init();
+      
+      // Initialize quick filters
+      quickFilters.init();
       
       // Update date display
       this.updateDate();
@@ -308,15 +308,8 @@ class App {
     // Mark all done button
     const markAllBtn = document.querySelector('[data-action="mark-all-done"]');
     if (markAllBtn) {
-      markAllBtn.addEventListener('click', () => this.markAllDone());
-    }
-
-    // Bulk operations toggle button
-    const bulkToggleBtn = document.querySelector('[data-action="toggle-bulk-mode"]');
-    if (bulkToggleBtn) {
-      bulkToggleBtn.addEventListener('click', () => {
-        bulkOperations.toggleSelectionMode();
-        bulkToggleBtn.classList.toggle('active');
+      markAllBtn.addEventListener('click', () => {
+        this.markAllDone();
       });
     }
   }
