@@ -11,6 +11,7 @@ import { credentialsService } from './features/credentials/credentials.service.j
 import { analyticsService } from './features/analytics/analytics.service.js';
 import { keyboardShortcuts } from './features/keyboard/keyboard-shortcuts.service.js';
 import { bulkOperations } from './features/bulk/bulk-operations.service.js';
+import { enhancedSearch } from './features/search/enhanced-search.service.js';
 import { toast } from './shared/components/toast.js';
 import { formatDate, debounce } from './shared/constants.js';
 import { ComponentLoader } from './utils/component-loader.js';
@@ -54,6 +55,9 @@ class App {
       
       // Initialize bulk operations
       bulkOperations.init();
+      
+      // Initialize enhanced search
+      enhancedSearch.init();
       
       // Update date display
       this.updateDate();
@@ -270,12 +274,19 @@ class App {
       historyBtn.addEventListener('click', () => this.viewHistory());
     }
 
-    // Search input
+    // Search input with enhanced search
     const searchInput = document.getElementById('search-input');
     if (searchInput) {
       searchInput.addEventListener('input', debounce((e) => {
-        stateManager.setFilters({ search: e.target.value });
+        const query = e.target.value;
+        const results = enhancedSearch.search(query);
+        
+        // Update state with search results
+        stateManager.setFilters({ search: query });
         this.renderSites();
+        
+        // Show result count
+        this.updateSearchResultsCount(results.length, query);
       }, 300));
     }
 
@@ -1145,6 +1156,32 @@ class App {
     const dateElement = document.getElementById('current-date');
     if (dateElement) {
       dateElement.textContent = formatDate(new Date());
+    }
+  }
+
+  /**
+   * Update search results count
+   */
+  updateSearchResultsCount(count, query) {
+    let countElement = document.querySelector('.search-results-count');
+    
+    if (query && query.length > 0) {
+      if (!countElement) {
+        const searchField = document.getElementById('search-input')?.closest('.field');
+        if (searchField) {
+          countElement = document.createElement('div');
+          countElement.className = 'search-results-count';
+          searchField.appendChild(countElement);
+        }
+      }
+      
+      if (countElement) {
+        countElement.innerHTML = `Found <strong>${count}</strong> site${count !== 1 ? 's' : ''} matching "${query}"`;
+      }
+    } else {
+      if (countElement) {
+        countElement.remove();
+      }
     }
   }
 
