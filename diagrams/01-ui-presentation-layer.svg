@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850">
+  <rect width="1200" height="850" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <rect x="0" y="0" width="1200" height="60" fill="#3b82f6"/>
+  <text x="600" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="#fff" text-anchor="middle">
+    📱 Layer 1: UI / Presentation Layer
+  </text>
+  
+  <!-- Main Container -->
+  <rect x="30" y="80" width="1140" height="740" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- index.html -->
+  <rect x="60" y="110" width="260" height="300" rx="8" fill="#334155" stroke="#60a5fa" stroke-width="2"/>
+  <text x="190" y="140" font-family="monospace" font-size="16" font-weight="bold" fill="#60a5fa" text-anchor="middle">index.html (129 lines)</text>
+  <text x="80" y="170" font-family="Arial" font-size="12" fill="#cbd5e1">Main Entry Point:</text>
+  <text x="80" y="190" font-family="Arial" font-size="11" fill="#94a3b8">• &lt;div class="app-shell"&gt;</text>
+  <text x="80" y="210" font-family="Arial" font-size="11" fill="#94a3b8">• &lt;header class="topbar"&gt;</text>
+  <text x="80" y="230" font-family="Arial" font-size="11" fill="#94a3b8">• &lt;section class="toolbar"&gt;</text>
+  <text x="80" y="250" font-family="Arial" font-size="11" fill="#94a3b8">• Progress Ring (SVG)</text>
+  <text x="80" y="270" font-family="Arial" font-size="11" fill="#94a3b8">• &lt;main id="sites-grid"&gt;</text>
+  <text x="80" y="290" font-family="Arial" font-size="11" fill="#94a3b8">• Filter Panel</text>
+  <text x="80" y="310" font-family="Arial" font-size="11" fill="#94a3b8">• &lt;div id="modal-container"&gt;</text>
+  <text x="80" y="330" font-family="Arial" font-size="11" fill="#94a3b8">• &lt;footer class="app-footer"&gt;</text>
+  <text x="80" y="360" font-family="Arial" font-size="11" font-weight="bold" fill="#60a5fa">Loads:</text>
+  <text x="80" y="380" font-family="monospace" font-size="10" fill="#94a3b8">src/assets/css/main.css</text>
+  <text x="80" y="395" font-family="monospace" font-size="10" fill="#94a3b8">src/main.js (ES Module)</text>
+  
+  <!-- HTML Components -->
+  <rect x="350" y="110" width="260" height="300" rx="8" fill="#334155" stroke="#60a5fa" stroke-width="2"/>
+  <text x="480" y="140" font-family="monospace" font-size="16" font-weight="bold" fill="#60a5fa" text-anchor="middle">HTML Components</text>
+  <text x="370" y="170" font-family="Arial" font-size="12" fill="#cbd5e1">Dynamic Modules:</text>
+  <rect x="370" y="185" width="220" height="50" rx="4" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+  <text x="480" y="205" font-family="monospace" font-size="11" fill="#60a5fa" text-anchor="middle">add-site-modal.html</text>
+  <text x="380" y="225" font-family="Arial" font-size="9" fill="#94a3b8">Form for adding sites/credentials</text>
+  
+  <rect x="370" y="245" width="220" height="50" rx="4" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+  <text x="480" y="265" font-family="monospace" font-size="11" fill="#60a5fa" text-anchor="middle">history-modal.html</text>
+  <text x="380" y="285" font-family="Arial" font-size="9" fill="#94a3b8">Check-in history viewer</text>
+  
+  <text x="370" y="315" font-family="Arial" font-size="12" fill="#cbd5e1">Loaded by:</text>
+  <text x="370" y="335" font-family="monospace" font-size="10" fill="#94a3b8">ComponentLoader.loadComponent()</text>
+  <text x="370" y="355" font-family="Arial" font-size="10" fill="#94a3b8">• Async fetch &amp; injection</text>
+  <text x="370" y="375" font-family="Arial" font-size="10" fill="#94a3b8">• Injected into #modal-container</text>
+  <text x="370" y="395" font-family="Arial" font-size="10" fill="#94a3b8">• Event listeners attached after load</text>
+  
+  <!-- CSS Architecture -->
+  <rect x="640" y="110" width="500" height="300" rx="8" fill="#334155" stroke="#60a5fa" stroke-width="2"/>
+  <text x="890" y="140" font-family="monospace" font-size="16" font-weight="bold" fill="#60a5fa" text-anchor="middle">🎨 Modular CSS Architecture</text>
+  <text x="660" y="170" font-family="Arial" font-size="12" fill="#cbd5e1">8 Separate CSS Files (Imported via main.css):</text>
+  
+  <rect x="660" y="185" width="220" height="35" rx="4" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="770" y="205" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle">variables.css</text>
+  <text x="670" y="215" font-family="Arial" font-size="8" fill="#94a3b8">CSS vars, colors, spacing</text>
+  
+  <rect x="900" y="185" width="220" height="35" rx="4" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="1010" y="205" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle">base.css</text>
+  <text x="910" y="215" font-family="Arial" font-size="8" fill="#94a3b8">Reset, typography, animations</text>
+  
+  <rect x="660" y="230" width="220" height="35" rx="4" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="770" y="250" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle">layout.css</text>
+  <text x="670" y="260" font-family="Arial" font-size="8" fill="#94a3b8">Grid, flex, containers</text>
+  
+  <rect x="900" y="230" width="220" height="35" rx="4" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="1010" y="250" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle">components.css</text>
+  <text x="910" y="260" font-family="Arial" font-size="8" fill="#94a3b8">Buttons, badges, pills</text>
+  
+  <rect x="660" y="275" width="220" height="35" rx="4" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="770" y="295" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle">forms.css</text>
+  <text x="670" y="305" font-family="Arial" font-size="8" fill="#94a3b8">Inputs, selects, labels</text>
+  
+  <rect x="900" y="275" width="220" height="35" rx="4" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="1010" y="295" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle">modal.css</text>
+  <text x="910" y="305" font-family="Arial" font-size="8" fill="#94a3b8">Modal dialogs, overlays</text>
+  
+  <rect x="660" y="320" width="220" height="35" rx="4" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="770" y="340" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle">cards.css</text>
+  <text x="670" y="350" font-family="Arial" font-size="8" fill="#94a3b8">Site &amp; credential cards</text>
+  
+  <rect x="900" y="320" width="220" height="35" rx="4" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="1010" y="340" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle">toast.css</text>
+  <text x="910" y="350" font-family="Arial" font-size="8" fill="#94a3b8">Toast notifications</text>
+  
+  <text x="660" y="380" font-family="Arial" font-size="11" font-weight="bold" fill="#60a5fa">Features:</text>
+  <text x="660" y="395" font-family="Arial" font-size="10" fill="#94a3b8">✓ CSS Variables for theming  ✓ Dark/Light mode support</text>
+  
+  <!-- User Interactions -->
+  <rect x="60" y="440" width="360" height="300" rx="8" fill="#334155" stroke="#60a5fa" stroke-width="2"/>
+  <text x="240" y="470" font-family="monospace" font-size="16" font-weight="bold" fill="#60a5fa" text-anchor="middle">User Interactions &amp; Events</text>
+  <text x="80" y="500" font-family="Arial" font-size="12" fill="#cbd5e1">Button Actions:</text>
+  <text x="80" y="520" font-family="Arial" font-size="10" fill="#94a3b8">• "Add Site" → Opens add-site-modal</text>
+  <text x="80" y="540" font-family="Arial" font-size="10" fill="#94a3b8">• "Check In" → Toggles credential status</text>
+  <text x="80" y="560" font-family="Arial" font-size="10" fill="#94a3b8">• "Copy" → Copies email/password to clipboard</text>
+  <text x="80" y="580" font-family="Arial" font-size="10" fill="#94a3b8">• "History" → Opens history-modal</text>
+  <text x="80" y="600" font-family="Arial" font-size="10" fill="#94a3b8">• "Reset Day" → Resets all check-ins</text>
+  <text x="80" y="620" font-family="Arial" font-size="10" fill="#94a3b8">• "Mark All Done" → Checks all credentials</text>
+  <text x="80" y="650" font-family="Arial" font-size="12" fill="#cbd5e1">Search &amp; Filters:</text>
+  <text x="80" y="670" font-family="Arial" font-size="10" fill="#94a3b8">• Search input (debounced 300ms)</text>
+  <text x="80" y="690" font-family="Arial" font-size="10" fill="#94a3b8">• Status filter (All/Pending/Done)</text>
+  <text x="80" y="710" font-family="Arial" font-size="10" fill="#94a3b8">• Real-time filtering on state change</text>
+  
+  <!-- Visual Feedback -->
+  <rect x="450" y="440" width="360" height="300" rx="8" fill="#334155" stroke="#60a5fa" stroke-width="2"/>
+  <text x="630" y="470" font-family="monospace" font-size="16" font-weight="bold" fill="#60a5fa" text-anchor="middle">Visual Feedback System</text>
+  <text x="470" y="500" font-family="Arial" font-size="12" fill="#cbd5e1">Toast Notifications:</text>
+  <text x="470" y="520" font-family="Arial" font-size="10" fill="#10b981">✓ Success: "Checked in!", "Site added!"</text>
+  <text x="470" y="540" font-family="Arial" font-size="10" fill="#3b82f6">ℹ Info: "All credentials reset"</text>
+  <text x="470" y="560" font-family="Arial" font-size="10" fill="#ef4444">✗ Error: "Failed to copy", "Invalid data"</text>
+  <text x="470" y="590" font-family="Arial" font-size="12" fill="#cbd5e1">Progress Indicators:</text>
+  <text x="470" y="610" font-family="Arial" font-size="10" fill="#94a3b8">• Progress ring (SVG animation)</text>
+  <text x="470" y="630" font-family="Arial" font-size="10" fill="#94a3b8">• Site progress bars</text>
+  <text x="470" y="650" font-family="Arial" font-size="10" fill="#94a3b8">• Status pills (pending/done/partial)</text>
+  <text x="470" y="680" font-family="Arial" font-size="12" fill="#cbd5e1">Color Coding:</text>
+  <text x="470" y="700" font-family="Arial" font-size="10" fill="#94a3b8">• Green border = Checked today</text>
+  <text x="470" y="720" font-family="Arial" font-size="10" fill="#94a3b8">• Subtle transitions on state change</text>
+  
+  <!-- Responsive Design -->
+  <rect x="840" y="440" width="300" height="320" rx="8" fill="#334155" stroke="#60a5fa" stroke-width="2"/>
+  <text x="990" y="470" font-family="monospace" font-size="16" font-weight="bold" fill="#60a5fa" text-anchor="middle">Responsive Design</text>
+  <text x="860" y="500" font-family="Arial" font-size="12" fill="#cbd5e1">Breakpoints:</text>
+  <text x="860" y="520" font-family="monospace" font-size="10" fill="#94a3b8">sm: 640px</text>
+  <text x="860" y="540" font-family="monospace" font-size="10" fill="#94a3b8">md: 768px</text>
+  <text x="860" y="560" font-family="monospace" font-size="10" fill="#94a3b8">lg: 1024px</text>
+  <text x="860" y="580" font-family="monospace" font-size="10" fill="#94a3b8">xl: 1280px</text>
+  <text x="860" y="610" font-family="Arial" font-size="12" fill="#cbd5e1">Grid System:</text>
+  <text x="860" y="630" font-family="Arial" font-size="10" fill="#94a3b8">• Auto-responsive grid</text>
+  <text x="860" y="650" font-family="Arial" font-size="10" fill="#94a3b8">• Mobile: 1 column</text>
+  <text x="860" y="670" font-family="Arial" font-size="10" fill="#94a3b8">• Tablet: 2 columns</text>
+  <text x="860" y="690" font-family="Arial" font-size="10" fill="#94a3b8">• Desktop: 3-4 columns</text>
+  <text x="860" y="720" font-family="Arial" font-size="10" fill="#94a3b8">✓ Touch-friendly (44px)</text>
+</svg>

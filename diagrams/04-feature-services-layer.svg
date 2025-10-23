@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 870">
+  <rect width="1200" height="870" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <rect x="0" y="0" width="1200" height="60" fill="#f59e0b"/>
+  <text x="600" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="#fff" text-anchor="middle">
+    🎯 Layer 4: Feature Services (Business Logic)
+  </text>
+  
+  <!-- Main Container -->
+  <rect x="30" y="80" width="1140" height="760" rx="10" fill="#3a2e1e" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- SitesService -->
+  <rect x="60" y="110" width="540" height="340" rx="8" fill="#4a3a2a" stroke="#fbbf24" stroke-width="2"/>
+  <text x="330" y="140" font-family="monospace" font-size="18" font-weight="bold" fill="#fcd34d" text-anchor="middle">SitesService (343 lines) - Singleton</text>
+  
+  <text x="80" y="170" font-family="Arial" font-size="13" font-weight="bold" fill="#fcd34d">Site Management Logic:</text>
+  <text x="80" y="195" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Site CRUD Operations</text>
+  <text x="80" y="215" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Site Status Calculation (pending/done/partial)</text>
+  <text x="80" y="235" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Progress Tracking (percentage complete)</text>
+  <text x="80" y="255" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Sorting &amp; Grouping (by category, priority, name)</text>
+  <text x="80" y="275" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Stale Site Detection (not checked in X days)</text>
+  <text x="80" y="295" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Site Statistics &amp; Analytics</text>
+  <text x="80" y="315" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Favicon URL Generation</text>
+  
+  <text x="80" y="345" font-family="Arial" font-size="13" font-weight="bold" fill="#fcd34d">Key Methods:</text>
+  <rect x="80" y="355" width="250" height="80" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="90" y="375" font-family="monospace" font-size="9" fill="#fbbf24">createSite(siteData)</text>
+  <text x="90" y="390" font-family="monospace" font-size="9" fill="#fbbf24">updateSite(id, updates)</text>
+  <text x="90" y="405" font-family="monospace" font-size="9" fill="#fbbf24">deleteSite(id)</text>
+  <text x="90" y="420" font-family="monospace" font-size="9" fill="#fbbf24">getSiteStatus(site)</text>
+  <text x="90" y="435" font-family="monospace" font-size="9" fill="#fbbf24">getSiteProgress(site)</text>
+  
+  <rect x="345" y="355" width="235" height="80" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="355" y="375" font-family="monospace" font-size="9" fill="#fbbf24">getPendingSites()</text>
+  <text x="355" y="390" font-family="monospace" font-size="9" fill="#fbbf24">getCompletedSites()</text>
+  <text x="355" y="405" font-family="monospace" font-size="9" fill="#fbbf24">getStaleSites(days)</text>
+  <text x="355" y="420" font-family="monospace" font-size="9" fill="#fbbf24">duplicateSite(id)</text>
+  <text x="355" y="435" font-family="monospace" font-size="9" fill="#fbbf24">sortSites(sites, by)</text>
+  
+  <!-- CredentialsService -->
+  <rect x="630" y="110" width="510" height="340" rx="8" fill="#4a3a2a" stroke="#fbbf24" stroke-width="2"/>
+  <text x="885" y="140" font-family="monospace" font-size="18" font-weight="bold" fill="#fcd34d" text-anchor="middle">CredentialsService (383 lines) - Singleton</text>
+  
+  <text x="650" y="170" font-family="Arial" font-size="13" font-weight="bold" fill="#fcd34d">Credential Management:</text>
+  <text x="650" y="195" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Credential CRUD Operations</text>
+  <text x="650" y="215" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Check-In Toggle (mark as checked today)</text>
+  <text x="650" y="235" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Copy Email/Password to Clipboard</text>
+  <text x="650" y="255" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Password Strength Calculation (7-point scale)</text>
+  <text x="650" y="275" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Duplicate Password Detection</text>
+  <text x="650" y="295" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Weak Password Identification</text>
+  <text x="650" y="315" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Credential Health Scoring</text>
+  
+  <text x="650" y="345" font-family="Arial" font-size="13" font-weight="bold" fill="#fcd34d">Key Methods:</text>
+  <rect x="650" y="355" width="220" height="80" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="660" y="375" font-family="monospace" font-size="9" fill="#fbbf24">addCredential(siteId, data)</text>
+  <text x="660" y="390" font-family="monospace" font-size="9" fill="#fbbf24">toggleCheckIn(siteId, credId)</text>
+  <text x="660" y="405" font-family="monospace" font-size="9" fill="#fbbf24">copyEmail(siteId, credId)</text>
+  <text x="660" y="420" font-family="monospace" font-size="9" fill="#fbbf24">copyPassword(siteId, credId)</text>
+  <text x="660" y="435" font-family="monospace" font-size="9" fill="#fbbf24">isCheckedInToday(cred)</text>
+  
+  <rect x="890" y="355" width="230" height="80" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="900" y="375" font-family="monospace" font-size="9" fill="#fbbf24">findDuplicatePasswords()</text>
+  <text x="900" y="390" font-family="monospace" font-size="9" fill="#fbbf24">findWeakPasswords()</text>
+  <text x="900" y="405" font-family="monospace" font-size="9" fill="#fbbf24">findExpiredPasswords()</text>
+  <text x="900" y="420" font-family="monospace" font-size="9" fill="#fbbf24">getCredentialHealth(cred)</text>
+  <text x="900" y="435" font-family="monospace" font-size="9" fill="#fbbf24">getCheckInStats()</text>
+  
+  <!-- AnalyticsService -->
+  <rect x="60" y="470" width="1080" height="180" rx="8" fill="#4a3a2a" stroke="#fbbf24" stroke-width="2"/>
+  <text x="600" y="500" font-family="monospace" font-size="18" font-weight="bold" fill="#fcd34d" text-anchor="middle">AnalyticsService - Usage Tracking &amp; Statistics</text>
+  
+  <text x="80" y="530" font-family="Arial" font-size="13" font-weight="bold" fill="#fcd34d">Performance Metrics:</text>
+  <rect x="80" y="545" width="340" height="90" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="90" y="565" font-family="Arial" font-size="10" fill="#cbd5e1">• Total Check-Ins (lifetime counter)</text>
+  <text x="90" y="585" font-family="Arial" font-size="10" fill="#cbd5e1">• Current Streak (consecutive days)</text>
+  <text x="90" y="605" font-family="Arial" font-size="10" fill="#cbd5e1">• Longest Streak (all-time record)</text>
+  <text x="90" y="625" font-family="Arial" font-size="10" fill="#cbd5e1">• Average Daily Completion Rate</text>
+  
+  <rect x="440" y="545" width="340" height="90" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="450" y="565" font-family="Arial" font-size="10" fill="#cbd5e1">• Sites Added (total count)</text>
+  <text x="450" y="585" font-family="Arial" font-size="10" fill="#cbd5e1">• Sites Archived (soft deleted)</text>
+  <text x="450" y="605" font-family="Arial" font-size="10" fill="#cbd5e1">• Last Check-In Timestamp</text>
+  <text x="450" y="625" font-family="Arial" font-size="10" fill="#cbd5e1">• Security Score (credential health)</text>
+  
+  <rect x="800" y="545" width="320" height="90" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="810" y="565" font-family="Arial" font-size="10" fill="#cbd5e1">Methods:</text>
+  <text x="820" y="585" font-family="monospace" font-size="9" fill="#fbbf24">getPerformanceMetrics()</text>
+  <text x="820" y="605" font-family="monospace" font-size="9" fill="#fbbf24">trackCheckIn(siteId, credId)</text>
+  <text x="820" y="625" font-family="monospace" font-size="9" fill="#fbbf24">calculateStreak()</text>
+  
+  <!-- Shared Constants & Utilities -->
+  <rect x="60" y="670" width="1080" height="180" rx="8" fill="#4a3a2a" stroke="#fbbf24" stroke-width="2"/>
+  <text x="600" y="700" font-family="monospace" font-size="18" font-weight="bold" fill="#fcd34d" text-anchor="middle">Shared Utilities (constants.js - 305 lines)</text>
+  
+  <rect x="80" y="720" width="260" height="115" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="210" y="740" font-family="Arial" font-size="11" font-weight="bold" fill="#fcd34d" text-anchor="middle">Helper Functions</text>
+  <text x="90" y="760" font-family="monospace" font-size="9" fill="#fbbf24">generateUUID()</text>
+  <text x="90" y="775" font-family="monospace" font-size="9" fill="#fbbf24">formatDate(date, format)</text>
+  <text x="90" y="790" font-family="monospace" font-size="9" fill="#fbbf24">getRelativeTime(date)</text>
+  <text x="90" y="805" font-family="monospace" font-size="9" fill="#fbbf24">debounce(func, wait)</text>
+  <text x="90" y="820" font-family="monospace" font-size="9" fill="#fbbf24">throttle(func, limit)</text>
+  
+  <rect x="360" y="720" width="260" height="115" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="490" y="740" font-family="Arial" font-size="11" font-weight="bold" fill="#fcd34d" text-anchor="middle">Password &amp; Security</text>
+  <text x="370" y="760" font-family="monospace" font-size="9" fill="#fbbf24">calculatePasswordStrength()</text>
+  <text x="370" y="775" font-family="monospace" font-size="9" fill="#fbbf24">copyToClipboard(text)</text>
+  <text x="370" y="790" font-family="monospace" font-size="9" fill="#fbbf24">sanitizeHTML(str)</text>
+  <text x="370" y="805" font-family="monospace" font-size="9" fill="#fbbf24">isValidEmail(email)</text>
+  <text x="370" y="820" font-family="monospace" font-size="9" fill="#fbbf24">isValidURL(url)</text>
+  
+  <rect x="640" y="720" width="240" height="115" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="760" y="740" font-family="Arial" font-size="11" font-weight="bold" fill="#fcd34d" text-anchor="middle">Data Operations</text>
+  <text x="650" y="760" font-family="monospace" font-size="9" fill="#fbbf24">deepClone(obj)</text>
+  <text x="650" y="775" font-family="monospace" font-size="9" fill="#fbbf24">sortBy(array, prop)</text>
+  <text x="650" y="790" font-family="monospace" font-size="9" fill="#fbbf24">groupBy(array, prop)</text>
+  <text x="650" y="805" font-family="monospace" font-size="9" fill="#fbbf24">fuzzySearch(q, text)</text>
+  <text x="650" y="820" font-family="monospace" font-size="9" fill="#fbbf24">downloadFile(content)</text>
+  
+  <rect x="900" y="720" width="220" height="115" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="1010" y="740" font-family="Arial" font-size="11" font-weight="bold" fill="#fcd34d" text-anchor="middle">Safe Storage</text>
+  <text x="910" y="760" font-family="monospace" font-size="9" fill="#fbbf24">safeLocalStorage</text>
+  <text x="920" y="775" font-family="Arial" font-size="8" fill="#94a3b8">.getItem(key)</text>
+  <text x="920" y="790" font-family="Arial" font-size="8" fill="#94a3b8">.setItem(key, val)</text>
+  <text x="920" y="805" font-family="Arial" font-size="8" fill="#94a3b8">.removeItem(key)</text>
+  <text x="910" y="820" font-family="Arial" font-size="8" fill="#cbd5e1">Error wrapper</text>
+</svg>

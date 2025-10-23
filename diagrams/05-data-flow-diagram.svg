@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960">
+  <rect width="1200" height="960" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <rect x="0" y="0" width="1200" height="60" fill="#ec4899"/>
+  <text x="600" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="#fff" text-anchor="middle">
+    🔄 Data Flow &amp; Communication Patterns
+  </text>
+  
+  <!-- Main Container -->
+  <rect x="30" y="80" width="1140" height="850" rx="10" fill="#2e1e3a" stroke="#ec4899" stroke-width="2"/>
+  
+  <!-- User Action Flow -->
+  <text x="600" y="115" font-family="Arial" font-size="20" font-weight="bold" fill="#f9a8d4" text-anchor="middle">
+    Complete User Action Flow (Check-In Example)
+  </text>
+  
+  <rect x="60" y="135" width="160" height="60" rx="6" fill="#3b1e3e" stroke="#ec4899" stroke-width="2"/>
+  <text x="140" y="160" font-family="Arial" font-size="11" font-weight="bold" fill="#f9a8d4" text-anchor="middle">1. USER ACTION</text>
+  <text x="140" y="180" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">Clicks "Check In"</text>
+  
+  <text x="235" y="165" font-family="Arial" font-size="18" fill="#64748b">→</text>
+  
+  <rect x="260" y="135" width="160" height="60" rx="6" fill="#3b1e3e" stroke="#ec4899" stroke-width="2"/>
+  <text x="340" y="160" font-family="Arial" font-size="11" font-weight="bold" fill="#f9a8d4" text-anchor="middle">2. EVENT HANDLER</text>
+  <text x="340" y="180" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">handleCheckIn()</text>
+  
+  <text x="435" y="165" font-family="Arial" font-size="18" fill="#64748b">→</text>
+  
+  <rect x="460" y="135" width="160" height="60" rx="6" fill="#3b1e3e" stroke="#ec4899" stroke-width="2"/>
+  <text x="540" y="160" font-family="Arial" font-size="11" font-weight="bold" fill="#f9a8d4" text-anchor="middle">3. SERVICE CALL</text>
+  <text x="540" y="180" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">credentialsService</text>
+  
+  <text x="635" y="165" font-family="Arial" font-size="18" fill="#64748b">→</text>
+  
+  <rect x="660" y="135" width="160" height="60" rx="6" fill="#3b1e3e" stroke="#ec4899" stroke-width="2"/>
+  <text x="740" y="160" font-family="Arial" font-size="11" font-weight="bold" fill="#f9a8d4" text-anchor="middle">4. STATE UPDATE</text>
+  <text x="740" y="180" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">checkInCredential()</text>
+  
+  <text x="835" y="165" font-family="Arial" font-size="18" fill="#64748b">→</text>
+  
+  <rect x="860" y="135" width="160" height="60" rx="6" fill="#3b1e3e" stroke="#ec4899" stroke-width="2"/>
+  <text x="940" y="160" font-family="Arial" font-size="11" font-weight="bold" fill="#f9a8d4" text-anchor="middle">5. PERSIST</text>
+  <text x="940" y="180" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">localStorage.save()</text>
+  
+  <text x="1035" y="165" font-family="Arial" font-size="18" fill="#64748b">→</text>
+  
+  <rect x="1035" y="135" width="85" height="60" rx="6" fill="#3b1e3e" stroke="#ec4899" stroke-width="2"/>
+  <text x="1078" y="160" font-family="Arial" font-size="11" font-weight="bold" fill="#f9a8d4" text-anchor="middle">6. EMIT</text>
+  <text x="1078" y="180" font-family="Arial" font-size="9" fill="#cbd5e1" text-anchor="middle">EVENT</text>
+  
+  <!-- Return Path -->
+  <text x="600" y="230" font-family="Arial" font-size="16" font-weight="bold" fill="#f9a8d4" text-anchor="middle">↓ Event-Driven Updates ↓</text>
+  
+  <rect x="260" y="250" width="160" height="60" rx="6" fill="#1e3a2e" stroke="#10b981" stroke-width="2"/>
+  <text x="340" y="275" font-family="Arial" font-size="11" font-weight="bold" fill="#6ee7b7" text-anchor="middle">7. LISTENERS</text>
+  <text x="340" y="295" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">on(EVENT, callback)</text>
+  
+  <text x="435" y="280" font-family="Arial" font-size="18" fill="#64748b">→</text>
+  
+  <rect x="460" y="250" width="160" height="60" rx="6" fill="#1e3a2e" stroke="#10b981" stroke-width="2"/>
+  <text x="540" y="275" font-family="Arial" font-size="11" font-weight="bold" fill="#6ee7b7" text-anchor="middle">8. RE-RENDER</text>
+  <text x="540" y="295" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">app.render()</text>
+  
+  <text x="635" y="280" font-family="Arial" font-size="18" fill="#64748b">→</text>
+  
+  <rect x="660" y="250" width="160" height="60" rx="6" fill="#1e3a2e" stroke="#10b981" stroke-width="2"/>
+  <text x="740" y="275" font-family="Arial" font-size="11" font-weight="bold" fill="#6ee7b7" text-anchor="middle">9. UI UPDATE</text>
+  <text x="740" y="295" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">DOM updated</text>
+  
+  <text x="835" y="280" font-family="Arial" font-size="18" fill="#64748b">→</text>
+  
+  <rect x="860" y="250" width="160" height="60" rx="6" fill="#1e3a2e" stroke="#10b981" stroke-width="2"/>
+  <text x="940" y="275" font-family="Arial" font-size="11" font-weight="bold" fill="#6ee7b7" text-anchor="middle">10. FEEDBACK</text>
+  <text x="940" y="295" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">Toast notification</text>
+  
+  <!-- State Management Pattern -->
+  <rect x="60" y="350" width="540" height="280" rx="8" fill="#1e1e2e" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="330" y="380" font-family="Arial" font-size="18" font-weight="bold" fill="#a78bfa" text-anchor="middle">State Management Pattern</text>
+  
+  <text x="80" y="410" font-family="Arial" font-size="13" font-weight="bold" fill="#c4b5fd">Unidirectional Data Flow:</text>
+  
+  <rect x="100" y="425" width="460" height="30" rx="4" fill="#2d2d40" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="330" y="447" font-family="Arial" font-size="11" fill="#cbd5e1" text-anchor="middle">Action → Service → StateManager → Storage → Event → UI</text>
+  
+  <text x="80" y="480" font-family="Arial" font-size="13" font-weight="bold" fill="#c4b5fd">Immutable State Updates:</text>
+  <rect x="100" y="495" width="460" height="50" rx="4" fill="#2d2d40" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="110" y="515" font-family="monospace" font-size="9" fill="#94a3b8">const newState = { ...oldState, ...updates }</text>
+  <text x="110" y="530" font-family="monospace" font-size="9" fill="#94a3b8">storageService.setState(newState)</text>
+  <text x="110" y="540" font-family="Arial" font-size="8" fill="#64748b">Never mutate state directly</text>
+  
+  <text x="80" y="570" font-family="Arial" font-size="13" font-weight="bold" fill="#c4b5fd">Event-Driven Reactivity:</text>
+  <rect x="100" y="585" width="460" height="30" rx="4" fill="#2d2d40" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="110" y="605" font-family="Arial" font-size="10" fill="#cbd5e1">State changes emit events → Subscribers auto-update</text>
+  
+  <!-- localStorage Architecture -->
+  <rect x="630" y="350" width="510" height="280" rx="8" fill="#0d2818" stroke="#10b981" stroke-width="2"/>
+  <text x="885" y="380" font-family="Arial" font-size="18" font-weight="bold" fill="#10b981" text-anchor="middle">localStorage Architecture</text>
+  
+  <text x="650" y="410" font-family="Arial" font-size="13" font-weight="bold" fill="#6ee7b7">Storage Keys:</text>
+  <rect x="650" y="420" width="470" height="80" rx="4" fill="#1a3d2a" stroke="#10b981" stroke-width="1"/>
+  <text x="660" y="440" font-family="monospace" font-size="10" fill="#6ee7b7">"accc-dashboard-state"</text>
+  <text x="660" y="460" font-family="Arial" font-size="9" fill="#94a3b8">  → Main state (sites, credentials, analytics)</text>
+  <text x="660" y="480" font-family="monospace" font-size="10" fill="#6ee7b7">"accc-theme-preference"</text>
+  <text x="660" y="495" font-family="Arial" font-size="9" fill="#94a3b8">  → Theme setting (dark/light/auto)</text>
+  
+  <text x="650" y="525" font-family="Arial" font-size="13" font-weight="bold" fill="#6ee7b7">Data Structure:</text>
+  <rect x="650" y="535" width="470" height="80" rx="4" fill="#1a3d2a" stroke="#10b981" stroke-width="1"/>
+  <text x="660" y="555" font-family="Arial" font-size="10" fill="#cbd5e1">JSON.stringify(state) → localStorage</text>
+  <text x="660" y="575" font-family="Arial" font-size="10" fill="#cbd5e1">localStorage → JSON.parse() → state object</text>
+  <text x="660" y="595" font-family="Arial" font-size="10" fill="#cbd5e1">✓ Error handling with try/catch</text>
+  <text x="660" y="610" font-family="Arial" font-size="10" fill="#cbd5e1">✓ Fallback to default state on error</text>
+  
+  <!-- Communication Patterns -->
+  <rect x="60" y="660" width="540" height="260" rx="8" fill="#3a2e1e" stroke="#f59e0b" stroke-width="2"/>
+  <text x="330" y="690" font-family="Arial" font-size="18" font-weight="bold" fill="#fcd34d" text-anchor="middle">Service Communication</text>
+  
+  <text x="80" y="720" font-family="Arial" font-size="12" font-weight="bold" fill="#fcd34d">1. Service → State:</text>
+  <rect x="100" y="735" width="460" height="25" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="110" y="752" font-family="Arial" font-size="10" fill="#cbd5e1">Services call StateManager</text>
+  
+  <text x="80" y="780" font-family="Arial" font-size="12" font-weight="bold" fill="#fcd34d">2. State → Storage:</text>
+  <rect x="100" y="795" width="460" height="25" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="110" y="812" font-family="Arial" font-size="10" fill="#cbd5e1">Persist via StorageService</text>
+  
+  <text x="80" y="840" font-family="Arial" font-size="12" font-weight="bold" fill="#fcd34d">3. State → Subscribers:</text>
+  <rect x="100" y="855" width="460" height="25" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="110" y="872" font-family="Arial" font-size="10" fill="#cbd5e1">Events to listeners</text>
+  
+  <text x="80" y="900" font-family="Arial" font-size="12" font-weight="bold" fill="#fcd34d">4. App → UI:</text>
+  <rect x="100" y="915" width="460" height="25" rx="4" fill="#2e1e1e" stroke="#f59e0b" stroke-width="1"/>
+  <text x="110" y="932" font-family="Arial" font-size="10" fill="#cbd5e1">Re-render on change</text>
+  
+  <!-- Security & Privacy Flow -->
+  <rect x="630" y="660" width="510" height="260" rx="8" fill="#1e1e2e" stroke="#ec4899" stroke-width="2"/>
+  <text x="885" y="690" font-family="Arial" font-size="18" font-weight="bold" fill="#f9a8d4" text-anchor="middle">Security &amp; Privacy</text>
+  
+  <text x="650" y="720" font-family="Arial" font-size="13" font-weight="bold" fill="#f9a8d4">Data Privacy:</text>
+  <rect x="650" y="735" width="470" height="75" rx="4" fill="#2d2d40" stroke="#ec4899" stroke-width="1"/>
+  <text x="660" y="755" font-family="Arial" font-size="10" fill="#cbd5e1">✓ 100% Client-Side App</text>
+  <text x="660" y="775" font-family="Arial" font-size="10" fill="#cbd5e1">✓ No External APIs</text>
+  <text x="660" y="795" font-family="Arial" font-size="10" fill="#cbd5e1">✓ localStorage Only</text>
+  <text x="660" y="810" font-family="Arial" font-size="10" fill="#cbd5e1">✓ Optional AES-GCM</text>
+  
+  <text x="650" y="835" font-family="Arial" font-size="13" font-weight="bold" fill="#f9a8d4">Clipboard Security:</text>
+  <rect x="650" y="850" width="470" height="60" rx="4" fill="#2d2d40" stroke="#ec4899" stroke-width="1"/>
+  <text x="660" y="870" font-family="Arial" font-size="10" fill="#cbd5e1">1. Copy to clipboard</text>
+  <text x="660" y="890" font-family="Arial" font-size="10" fill="#cbd5e1">2. Auto-clear (30s)</text>
+  <text x="660" y="905" font-family="Arial" font-size="10" fill="#cbd5e1">3. Toast confirms</text>
+</svg>

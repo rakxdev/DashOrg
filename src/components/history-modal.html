@@ -1,0 +1,50 @@
+<!-- History Modal -->
+<div class="modal" id="history-modal">
+  <div class="modal__overlay" data-action="close-history-modal"></div>
+  <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="history-modal-title">
+    <header class="modal__header">
+      <h2 id="history-modal-title">📊 Check-In History</h2>
+      <button class="btn-icon btn-icon--lg" data-action="close-history-modal" aria-label="Close">×</button>
+    </header>
+
+    <div class="modal__body">
+      <!-- Date Filter -->
+      <div class="form-section">
+        <div class="form-row form-row--split">
+          <div class="field">
+            <label class="field__label">View Date</label>
+            <input type="date" id="history-date-filter" />
+          </div>
+          <div class="field">
+            <label class="field__label">Quick Select</label>
+            <select id="history-quick-select">
+              <option value="today">Today</option>
+              <option value="yesterday">Yesterday</option>
+              <option value="week">Last 7 Days</option>
+              <option value="month">Last 30 Days</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- History Content -->
+      <div id="history-content" class="history-content">
+        <!-- Content will be populated by JavaScript -->
+      </div>
+
+      <!-- Info Box -->
+      <div class="info-box info-box--info">
+        <span class="info-box__icon">ℹ️</span>
+        <div class="info-box__content">
+          <strong>Note:</strong> Check-ins reset daily at midnight (12:00 AM) in your local timezone.
+        </div>
+      </div>
+    </div>
+
+    <footer class="modal__footer">
+      <button type="button" class="btn btn--ghost" data-action="close-history-modal">
+        Close
+      </button>
+    </footer>
+  </div>
+</div>

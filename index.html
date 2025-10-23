@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy-first credential management dashboard with advanced features" />
+  <title>DashOrg - Enhanced Credential Dashboard</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="src/assets/css/main.css" />
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self' ws://127.0.0.1:*;" />
+</head>
+<body>
+  <!-- Background Overlay -->
+  <div class="background-overlay" aria-hidden="true"></div>
+
+  <!-- App Shell -->
+  <div class="app-shell">
+    <!-- Top Navigation Bar -->
+    <header class="topbar">
+      <div>
+        <h1>DashOrg</h1>
+        <p>Enhanced Credential Dashboard</p>
+      </div>
+      <div class="topbar__actions">
+        <div class="date-chip">
+          <span class="date-chip__label">Today</span>
+          <time id="current-date" class="date-chip__value">-</time>
+        </div>
+        <button class="btn btn--ghost" data-action="view-history" type="button" title="View check-in history">
+          📊 History
+        </button>
+        <button class="btn btn--primary" data-action="open-modal" type="button">
+          <span aria-hidden="true">+</span>
+          Add Site
+        </button>
+      </div>
+    </header>
+
+    <!-- Toolbar with Progress & Filters -->
+    <section class="toolbar">
+      <!-- Progress Card -->
+      <article class="metric-card" aria-live="polite">
+        <div class="metric-card__header">
+          <div>
+            <h2>Daily Progress</h2>
+            <p class="metric-card__subtext">Track your check-in completion rate</p>
+          </div>
+          <span id="progress-count" class="badge">0 / 0 done</span>
+        </div>
+        <div class="progress-ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="progress-ring__background" cx="60" cy="60" r="54"></circle>
+            <circle class="progress-ring__value" cx="60" cy="60" r="54"></circle>
+          </svg>
+          <span class="progress-ring__label" id="progress-percent">0%</span>
+        </div>
+      </article>
+
+      <!-- Filters Panel -->
+      <div class="filters-panel">
+        <label class="field">
+          <span class="field__label">Search</span>
+          <input 
+            id="search-input" 
+            type="search" 
+            placeholder="Search by site, email, tag..." 
+            autocomplete="off"
+          />
+        </label>
+        
+        <label class="field">
+          <span class="field__label">Status Filter</span>
+          <select id="status-filter">
+            <option value="all">All Sites</option>
+            <option value="pending">Pending Today</option>
+            <option value="done">Completed Today</option>
+          </select>
+        </label>
+        
+        <div class="filters-panel__actions">
+          <button class="btn btn--ghost" data-action="reset-day" type="button">
+            Reset Today
+          </button>
+          <button class="btn btn--accent" data-action="mark-all-done" type="button">
+            Mark All Done
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sites Grid -->
+    <main class="sites-grid" id="sites-grid" aria-live="polite">
+      <!-- Sites will be rendered here by JavaScript -->
+      <div class="empty-state">
+        <span class="empty-state__icon">🚀</span>
+        <h3>Welcome to DashOrg</h3>
+        <p>Click "Add Site" to get started with your credential tracking</p>
+      </div>
+    </main>
+
+    <!-- Modal Container (will be loaded dynamically) -->
+    <div id="modal-container"></div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>
+        <strong>Privacy Notice:</strong> All data is stored locally in your browser. 
+        No information is sent to external servers. Clear data when using shared devices.
+      </p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem;">
+        DashOrg v2.0.0 |
+        <a href="https://github.com" style="color: var(--color-primary);">Documentation</a> | 
+        <a href="#" data-action="export-data" style="color: var(--color-primary);">Export Data</a>
+      </p>
+    </footer>
+  </div>
+
+  <!-- Load Application (ES Module) -->
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

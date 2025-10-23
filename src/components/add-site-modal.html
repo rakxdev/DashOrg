@@ -1,0 +1,130 @@
+<!-- Add Site Modal -->
+<div class="modal" id="add-site-modal">
+  <div class="modal__overlay" data-action="close-modal"></div>
+  <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <header class="modal__header">
+      <h2 id="modal-title">Add New Site</h2>
+      <button class="btn-icon btn-icon--lg" data-action="close-modal" aria-label="Close">×</button>
+    </header>
+
+    <div class="modal__body">
+      <form id="add-site-form">
+        <!-- Site Selection or New Site -->
+        <div class="form-section">
+          <h3 class="form-section__title">Site Selection</h3>
+          
+          <div class="form-row">
+            <div class="field">
+              <label class="field__label">
+                Add to Existing Site or Create New
+              </label>
+              <select id="site-selector" name="site-selector">
+                <option value="new">➕ Create New Site</option>
+                <!-- Existing sites will be populated here -->
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Site Information (shown only for new sites) -->
+        <div class="form-section" id="site-info-section">
+          <h3 class="form-section__title">Site Information</h3>
+          
+          <div class="form-row">
+            <div class="field">
+              <label class="field__label">
+                Site Name <span class="required">*</span>
+              </label>
+              <input
+                type="text"
+                name="site-name"
+                id="site-name-input"
+                placeholder="e.g., Gmail, GitHub, Banking App"
+                required
+                autofocus
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label class="field__label">
+                Login URL <span class="required">*</span>
+              </label>
+              <input
+                type="url"
+                name="site-url"
+                id="site-url-input"
+                placeholder="https://example.com/login"
+                required
+              />
+              <span class="field__hint">The URL where you log in to this site</span>
+            </div>
+          </div>
+
+          <div class="form-row form-row--split">
+            <div class="field">
+              <label class="field__label">Category (Optional)</label>
+              <select name="site-category" id="site-category-input">
+                <option value="">Select a category</option>
+                <option value="finance">💰 Finance</option>
+                <option value="work">💼 Work</option>
+                <option value="personal">👤 Personal</option>
+                <option value="social">📱 Social Media</option>
+                <option value="entertainment">🎬 Entertainment</option>
+                <option value="utilities">⚡ Utilities</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field__label">Tags (Optional)</label>
+              <input
+                type="text"
+                name="site-tags"
+                id="site-tags-input"
+                placeholder="important, 2fa, work"
+              />
+              <span class="field__hint">Comma-separated tags</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credentials Section -->
+        <div class="form-section">
+          <div class="form-section__header">
+            <h3 class="form-section__title">Credentials</h3>
+            <button
+              type="button"
+              class="btn btn--ghost btn--sm"
+              data-action="add-credential-field"
+            >
+              <span>+</span> Add Another Credential
+            </button>
+          </div>
+
+          <div id="credentials-container" class="credentials-container">
+            <!-- Credential fields will be added here dynamically -->
+          </div>
+        </div>
+
+        <!-- Info Box -->
+        <div class="info-box info-box--warning">
+          <span class="info-box__icon">🔒</span>
+          <div class="info-box__content">
+            <strong>Security Notice:</strong> Your credentials are stored locally in your browser.
+            Only use this on devices you trust. Enable master password encryption for extra security.
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <footer class="modal__footer">
+      <button type="button" class="btn btn--ghost" data-action="close-modal">
+        Cancel
+      </button>
+      <button type="button" class="btn btn--primary" data-action="submit-form">
+        <span>✓</span> Save Site
+      </button>
+    </footer>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 880">
+  <rect width="1200" height="880" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <rect x="0" y="0" width="1200" height="60" fill="#8b5cf6"/>
+  <text x="600" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="#fff" text-anchor="middle">
+    ⚙️ Layer 2: Application Logic &amp; Orchestration
+  </text>
+  
+  <!-- Main Container -->
+  <rect x="30" y="80" width="1140" height="770" rx="10" fill="#1e1e2e" stroke="#8b5cf6" stroke-width="2"/>
+  
+  <!-- main.js - App Class -->
+  <rect x="60" y="110" width="540" height="400" rx="8" fill="#2d2d40" stroke="#a78bfa" stroke-width="2"/>
+  <text x="330" y="140" font-family="monospace" font-size="18" font-weight="bold" fill="#c4b5fd" text-anchor="middle">main.js - App Class (1187 lines)</text>
+  
+  <text x="80" y="170" font-family="Arial" font-size="13" font-weight="bold" fill="#c4b5fd">Core Responsibilities:</text>
+  <text x="80" y="195" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Application Bootstrap &amp; Initialization</text>
+  <text x="80" y="215" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Service Dependency Injection &amp; Coordination</text>
+  <text x="80" y="235" font-family="Arial" font-size="11" fill="#cbd5e1">✓ UI Rendering Engine (Dynamic HTML generation)</text>
+  <text x="80" y="255" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Event Handler Management (15+ handlers)</text>
+  <text x="80" y="275" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Modal Lifecycle Management</text>
+  <text x="80" y="295" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Theme Initialization &amp; Management</text>
+  
+  <text x="80" y="325" font-family="Arial" font-size="13" font-weight="bold" fill="#c4b5fd">Key Methods:</text>
+  <rect x="80" y="335" width="250" height="160" rx="4" fill="#1e1e2e" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="90" y="355" font-family="monospace" font-size="10" fill="#a78bfa">init()</text>
+  <text x="140" y="355" font-family="Arial" font-size="9" fill="#94a3b8">→ Bootstrap app</text>
+  <text x="90" y="375" font-family="monospace" font-size="10" fill="#a78bfa">render()</text>
+  <text x="145" y="375" font-family="Arial" font-size="9" fill="#94a3b8">→ Update all UI</text>
+  <text x="90" y="395" font-family="monospace" font-size="10" fill="#a78bfa">renderSites()</text>
+  <text x="175" y="395" font-family="Arial" font-size="9" fill="#94a3b8">→ Generate cards</text>
+  <text x="90" y="415" font-family="monospace" font-size="10" fill="#a78bfa">renderProgress()</text>
+  <text x="200" y="415" font-family="Arial" font-size="9" fill="#94a3b8">→ Update ring</text>
+  <text x="90" y="435" font-family="monospace" font-size="10" fill="#a78bfa">handleCheckIn()</text>
+  <text x="195" y="435" font-family="Arial" font-size="9" fill="#94a3b8">→ Toggle state</text>
+  <text x="90" y="455" font-family="monospace" font-size="10" fill="#a78bfa">openAddSiteModal()</text>
+  <text x="220" y="455" font-family="Arial" font-size="9" fill="#94a3b8">→ Show form</text>
+  <text x="90" y="475" font-family="monospace" font-size="10" fill="#a78bfa">subscribeToEvents()</text>
+  <text x="220" y="475" font-family="Arial" font-size="9" fill="#94a3b8">→ Listen state</text>
+  
+  <rect x="345" y="335" width="235" height="160" rx="4" fill="#1e1e2e" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="355" y="355" font-family="monospace" font-size="10" fill="#a78bfa">copyEmail()</text>
+  <text x="355" y="375" font-family="monospace" font-size="10" fill="#a78bfa">copyPassword()</text>
+  <text x="355" y="395" font-family="monospace" font-size="10" fill="#a78bfa">togglePassword()</text>
+  <text x="355" y="415" font-family="monospace" font-size="10" fill="#a78bfa">editCredential()</text>
+  <text x="355" y="435" font-family="monospace" font-size="10" fill="#a78bfa">deleteSite()</text>
+  <text x="355" y="455" font-family="monospace" font-size="10" fill="#a78bfa">resetSite()</text>
+  <text x="355" y="475" font-family="monospace" font-size="10" fill="#a78bfa">viewHistory()</text>
+  
+  <!-- config.js -->
+  <rect x="630" y="110" width="510" height="180" rx="8" fill="#2d2d40" stroke="#a78bfa" stroke-width="2"/>
+  <text x="885" y="140" font-family="monospace" font-size="18" font-weight="bold" fill="#c4b5fd" text-anchor="middle">config.js (193 lines)</text>
+  
+  <text x="650" y="170" font-family="Arial" font-size="12" font-weight="bold" fill="#c4b5fd">Global Configuration Object:</text>
+  <rect x="650" y="180" width="230" height="95" rx="4" fill="#1e1e2e" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="660" y="200" font-family="monospace" font-size="9" fill="#a78bfa">CONFIG.app</text>
+  <text x="730" y="200" font-family="Arial" font-size="8" fill="#94a3b8">→ name, version, keys</text>
+  <text x="660" y="215" font-family="monospace" font-size="9" fill="#a78bfa">CONFIG.theme</text>
+  <text x="740" y="215" font-family="Arial" font-size="8" fill="#94a3b8">→ default, storageKey</text>
+  <text x="660" y="230" font-family="monospace" font-size="9" fill="#a78bfa">CONFIG.security</text>
+  <text x="760" y="230" font-family="Arial" font-size="8" fill="#94a3b8">→ encryption, timeout</text>
+  <text x="660" y="245" font-family="monospace" font-size="9" fill="#a78bfa">CONFIG.features</text>
+  <text x="750" y="245" font-family="Arial" font-size="8" fill="#94a3b8">→ flags, toggles</text>
+  <text x="660" y="260" font-family="monospace" font-size="9" fill="#a78bfa">CONFIG.limits</text>
+  <text x="735" y="260" font-family="Arial" font-size="8" fill="#94a3b8">→ maxSites, maxCreds</text>
+  
+  <rect x="895" y="180" width="230" height="95" rx="4" fill="#1e1e2e" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="905" y="200" font-family="monospace" font-size="9" fill="#a78bfa">EVENTS.STATE_CHANGED</text>
+  <text x="905" y="215" font-family="monospace" font-size="9" fill="#a78bfa">EVENTS.SITE_ADDED</text>
+  <text x="905" y="230" font-family="monospace" font-size="9" fill="#a78bfa">EVENTS.SITE_UPDATED</text>
+  <text x="905" y="245" font-family="monospace" font-size="9" fill="#a78bfa">EVENTS.CREDENTIAL_CHECKED</text>
+  <text x="905" y="260" font-family="monospace" font-size="9" fill="#a78bfa">EVENTS.FILTER_CHANGED</text>
+  
+  <!-- ComponentLoader -->
+  <rect x="630" y="310" width="510" height="200" rx="8" fill="#2d2d40" stroke="#a78bfa" stroke-width="2"/>
+  <text x="885" y="340" font-family="monospace" font-size="18" font-weight="bold" fill="#c4b5fd" text-anchor="middle">ComponentLoader</text>
+  
+  <text x="650" y="370" font-family="Arial" font-size="12" font-weight="bold" fill="#c4b5fd">Dynamic HTML Component Loading:</text>
+  <text x="650" y="395" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Async fetch() of HTML component files</text>
+  <text x="650" y="415" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Inject into target DOM container</text>
+  <text x="650" y="435" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Error handling &amp; fallbacks</text>
+  <text x="650" y="455" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Support for multiple components</text>
+  
+  <rect x="650" y="470" width="470" height="30" rx="4" fill="#1e1e2e" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="660" y="490" font-family="monospace" font-size="10" fill="#a78bfa">static async loadComponent(path, container)</text>
+  
+  <!-- Event System -->
+  <rect x="60" y="530" width="540" height="310" rx="8" fill="#2d2d40" stroke="#a78bfa" stroke-width="2"/>
+  <text x="330" y="560" font-family="monospace" font-size="18" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Event System (Publisher/Subscriber Pattern)</text>
+  
+  <text x="80" y="590" font-family="Arial" font-size="12" font-weight="bold" fill="#c4b5fd">Observer Pattern Implementation:</text>
+  <text x="80" y="615" font-family="Arial" font-size="11" fill="#cbd5e1">Implemented in StateManager class</text>
+  
+  <rect x="80" y="630" width="240" height="190" rx="4" fill="#1e1e2e" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="200" y="650" font-family="Arial" font-size="11" font-weight="bold" fill="#10b981" text-anchor="middle">Publishers (Emit Events)</text>
+  <text x="90" y="675" font-family="Arial" font-size="10" fill="#cbd5e1">StateManager:</text>
+  <text x="100" y="695" font-family="monospace" font-size="9" fill="#94a3b8">emit(EVENTS.STATE_CHANGED)</text>
+  <text x="100" y="710" font-family="monospace" font-size="9" fill="#94a3b8">emit(EVENTS.SITE_ADDED)</text>
+  <text x="100" y="725" font-family="monospace" font-size="9" fill="#94a3b8">emit(EVENTS.CREDENTIAL_CHECKED)</text>
+  <text x="90" y="750" font-family="Arial" font-size="10" fill="#cbd5e1">StorageService:</text>
+  <text x="100" y="770" font-family="monospace" font-size="9" fill="#94a3b8">dispatchStorageEvent(type)</text>
+  <text x="90" y="795" font-family="Arial" font-size="10" fill="#cbd5e1">Services emit on data changes</text>
+  
+  <rect x="340" y="630" width="240" height="190" rx="4" fill="#1e1e2e" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="460" y="650" font-family="Arial" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Subscribers (Listen)</text>
+  <text x="350" y="675" font-family="Arial" font-size="10" fill="#cbd5e1">App Class:</text>
+  <text x="360" y="695" font-family="monospace" font-size="9" fill="#94a3b8">on(EVENTS.STATE_CHANGED,</text>
+  <text x="370" y="710" font-family="monospace" font-size="9" fill="#94a3b8">() =&gt; this.render())</text>
+  <text x="360" y="730" font-family="monospace" font-size="9" fill="#94a3b8">on(EVENTS.CREDENTIAL_CHECKED,</text>
+  <text x="370" y="745" font-family="monospace" font-size="9" fill="#94a3b8">() =&gt; toast.success())</text>
+  <text x="350" y="770" font-family="Arial" font-size="10" fill="#cbd5e1">Auto re-render on state change</text>
+  <text x="350" y="790" font-family="Arial" font-size="10" fill="#cbd5e1">Reactive UI updates</text>
+  
+  <!-- Application Flow -->
+  <rect x="630" y="530" width="510" height="310" rx="8" fill="#2d2d40" stroke="#a78bfa" stroke-width="2"/>
+  <text x="885" y="560" font-family="monospace" font-size="18" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Application Initialization Flow</text>
+  
+  <text x="650" y="590" font-family="Arial" font-size="11" font-weight="bold" fill="#c4b5fd">Step-by-Step Bootstrap:</text>
+  
+  <rect x="650" y="600" width="470" height="25" rx="4" fill="#1e3a2e" stroke="#10b981" stroke-width="1"/>
+  <text x="660" y="618" font-family="Arial" font-size="10" fill="#cbd5e1">1. DOM Ready → new App().init()</text>
+  
+  <text x="885" y="638" font-family="Arial" font-size="14" fill="#64748b">↓</text>
+  
+  <rect x="650" y="645" width="470" height="25" rx="4" fill="#1e3a2e" stroke="#10b981" stroke-width="1"/>
+  <text x="660" y="663" font-family="Arial" font-size="10" fill="#cbd5e1">2. Load HTML Components (modals)</text>
+  
+  <text x="885" y="683" font-family="Arial" font-size="14" fill="#64748b">↓</text>
+  
+  <rect x="650" y="690" width="470" height="25" rx="4" fill="#1e3a2e" stroke="#10b981" stroke-width="1"/>
+  <text x="660" y="708" font-family="Arial" font-size="10" fill="#cbd5e1">3. Initialize StateManager → Load from localStorage</text>
+  
+  <text x="885" y="728" font-family="Arial" font-size="14" fill="#64748b">↓</text>
+  
+  <rect x="650" y="735" width="470" height="25" rx="4" fill="#1e3a2e" stroke="#10b981" stroke-width="1"/>
+  <text x="660" y="753" font-family="Arial" font-size="10" fill="#cbd5e1">4. Initialize Theme (dark/light/auto)</text>
+  
+  <text x="885" y="773" font-family="Arial" font-size="14" fill="#64748b">↓</text>
+  
+  <rect x="650" y="780" width="470" height="25" rx="4" fill="#1e3a2e" stroke="#10b981" stroke-width="1"/>
+  <text x="660" y="798" font-family="Arial" font-size="10" fill="#cbd5e1">5. Render Initial UI (sites grid, progress ring)</text>
+  
+  <text x="885" y="818" font-family="Arial" font-size="14" fill="#64748b">↓</text>
+  
+  <rect x="650" y="825" width="470" height="30" rx="4" fill="#1e3a2e" stroke="#10b981" stroke-width="1"/>
+  <text x="660" y="845" font-family="Arial" font-size="10" fill="#cbd5e1">6. Attach Event Listeners &amp; Subscribe</text>
+</svg>

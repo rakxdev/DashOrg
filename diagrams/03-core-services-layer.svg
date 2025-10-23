@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 980">
+  <rect width="1200" height="980" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <rect x="0" y="0" width="1200" height="60" fill="#10b981"/>
+  <text x="600" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="#fff" text-anchor="middle">
+    🔧 Layer 3: Core Services (Foundation Layer)
+  </text>
+  
+  <!-- Main Container -->
+  <rect x="30" y="80" width="1140" height="870" rx="10" fill="#0d2818" stroke="#10b981" stroke-width="2"/>
+  
+  <!-- StateManager -->
+  <rect x="60" y="110" width="540" height="360" rx="8" fill="#1a3d2a" stroke="#34d399" stroke-width="2"/>
+  <text x="330" y="140" font-family="monospace" font-size="18" font-weight="bold" fill="#6ee7b7" text-anchor="middle">StateManager (447 lines) - Singleton</text>
+  
+  <text x="80" y="170" font-family="Arial" font-size="13" font-weight="bold" fill="#6ee7b7">Core Responsibilities:</text>
+  <text x="80" y="195" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Central State Management (Single Source of Truth)</text>
+  <text x="80" y="215" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Event Emission &amp; Subscription (Observer Pattern)</text>
+  <text x="80" y="235" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Filter &amp; Search Logic (Fuzzy Matching)</text>
+  <text x="80" y="255" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Progress Statistics Calculation</text>
+  <text x="80" y="275" font-family="Arial" font-size="11" fill="#cbd5e1">✓ CRUD Operations Orchestration</text>
+  <text x="80" y="295" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Import/Export Coordination</text>
+  
+  <text x="80" y="325" font-family="Arial" font-size="13" font-weight="bold" fill="#6ee7b7">State Structure:</text>
+  <rect x="80" y="335" width="240" height="120" rx="4" fill="#0d2818" stroke="#10b981" stroke-width="1"/>
+  <text x="90" y="355" font-family="monospace" font-size="9" fill="#6ee7b7">state = {</text>
+  <text x="100" y="370" font-family="monospace" font-size="9" fill="#94a3b8">version: "2.0.0",</text>
+  <text x="100" y="385" font-family="monospace" font-size="9" fill="#94a3b8">lastReset: "2025-10-22",</text>
+  <text x="100" y="400" font-family="monospace" font-size="9" fill="#94a3b8">settings: {...},</text>
+  <text x="100" y="415" font-family="monospace" font-size="9" fill="#94a3b8">categories: [...],</text>
+  <text x="100" y="430" font-family="monospace" font-size="9" fill="#94a3b8">sites: [...],</text>
+  <text x="100" y="445" font-family="monospace" font-size="9" fill="#94a3b8">analytics: {...}</text>
+  <text x="90" y="450" font-family="monospace" font-size="9" fill="#6ee7b7">}</text>
+  
+  <rect x="340" y="335" width="240" height="120" rx="4" fill="#0d2818" stroke="#10b981" stroke-width="1"/>
+  <text x="350" y="355" font-family="Arial" font-size="10" font-weight="bold" fill="#6ee7b7">Key Methods:</text>
+  <text x="360" y="375" font-family="monospace" font-size="9" fill="#94a3b8">getSites()</text>
+  <text x="360" y="390" font-family="monospace" font-size="9" fill="#94a3b8">getFilteredSites()</text>
+  <text x="360" y="405" font-family="monospace" font-size="9" fill="#94a3b8">updateSite(id, updates)</text>
+  <text x="360" y="420" font-family="monospace" font-size="9" fill="#94a3b8">checkInCredential()</text>
+  <text x="360" y="435" font-family="monospace" font-size="9" fill="#94a3b8">on(event, callback)</text>
+  <text x="360" y="450" font-family="monospace" font-size="9" fill="#94a3b8">emit(event, data)</text>
+  
+  <!-- StorageService -->
+  <rect x="630" y="110" width="510" height="360" rx="8" fill="#1a3d2a" stroke="#34d399" stroke-width="2"/>
+  <text x="885" y="140" font-family="monospace" font-size="18" font-weight="bold" fill="#6ee7b7" text-anchor="middle">StorageService (485 lines) - Singleton</text>
+  
+  <text x="650" y="170" font-family="Arial" font-size="13" font-weight="bold" fill="#6ee7b7">Core Responsibilities:</text>
+  <text x="650" y="195" font-family="Arial" font-size="11" fill="#cbd5e1">✓ localStorage Abstraction &amp; Error Handling</text>
+  <text x="650" y="215" font-family="Arial" font-size="11" fill="#cbd5e1">✓ JSON Serialization/Deserialization</text>
+  <text x="650" y="235" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Data Persistence (accc-dashboard-state)</text>
+  <text x="650" y="255" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Daily Reset Automation</text>
+  <text x="650" y="275" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Export/Import (JSON, CSV)</text>
+  <text x="650" y="295" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Streak Tracking &amp; Analytics Updates</text>
+  
+  <text x="650" y="325" font-family="Arial" font-size="13" font-weight="bold" fill="#6ee7b7">localStorage Keys:</text>
+  <rect x="650" y="335" width="470" height="120" rx="4" fill="#0d2818" stroke="#10b981" stroke-width="1"/>
+  <text x="660" y="355" font-family="monospace" font-size="10" fill="#6ee7b7">"accc-dashboard-state"</text>
+  <text x="870" y="355" font-family="Arial" font-size="9" fill="#94a3b8">→ Main application state</text>
+  <text x="660" y="375" font-family="monospace" font-size="10" fill="#6ee7b7">"accc-theme-preference"</text>
+  <text x="880" y="375" font-family="Arial" font-size="9" fill="#94a3b8">→ Theme setting</text>
+  <text x="660" y="400" font-family="Arial" font-size="10" font-weight="bold" fill="#6ee7b7">Key Methods:</text>
+  <text x="670" y="420" font-family="monospace" font-size="9" fill="#94a3b8">setState(state) | getState()</text>
+  <text x="670" y="435" font-family="monospace" font-size="9" fill="#94a3b8">checkInCredential(siteId, credId)</text>
+  <text x="670" y="450" font-family="monospace" font-size="9" fill="#94a3b8">exportData(format, options)</text>
+  
+  <!-- CryptoService -->
+  <rect x="60" y="490" width="540" height="200" rx="8" fill="#1a3d2a" stroke="#34d399" stroke-width="2"/>
+  <text x="330" y="520" font-family="monospace" font-size="18" font-weight="bold" fill="#6ee7b7" text-anchor="middle">CryptoService</text>
+  
+  <text x="80" y="550" font-family="Arial" font-size="13" font-weight="bold" fill="#6ee7b7">Encryption &amp; Security:</text>
+  <text x="80" y="575" font-family="Arial" font-size="11" fill="#cbd5e1">✓ AES-GCM Encryption</text>
+  <text x="80" y="595" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Web Crypto API</text>
+  <text x="80" y="615" font-family="Arial" font-size="11" fill="#cbd5e1">✓ PBKDF2 (100k iterations)</text>
+  <text x="80" y="635" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Master Password</text>
+  <text x="80" y="655" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Secure Random IV</text>
+  
+  <rect x="80" y="670" width="500" height="15" rx="4" fill="#0d2818" stroke="#10b981" stroke-width="1"/>
+  <text x="90" y="681" font-family="monospace" font-size="9" fill="#94a3b8">encrypt(data, pass) | decrypt(data, pass)</text>
+  
+  <!-- Migrations -->
+  <rect x="630" y="490" width="510" height="200" rx="8" fill="#1a3d2a" stroke="#34d399" stroke-width="2"/>
+  <text x="885" y="520" font-family="monospace" font-size="18" font-weight="bold" fill="#6ee7b7" text-anchor="middle">Migrations Service</text>
+  
+  <text x="650" y="550" font-family="Arial" font-size="13" font-weight="bold" fill="#6ee7b7">Version Management:</text>
+  <text x="650" y="575" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Data Migrations (v1.0 → v2.0)</text>
+  <text x="650" y="595" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Schema Updates</text>
+  <text x="650" y="615" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Backward Compatible</text>
+  <text x="650" y="635" font-family="Arial" font-size="11" fill="#cbd5e1">✓ Auto-migrate on Load</text>
+  
+  <rect x="650" y="655" width="470" height="30" rx="4" fill="#0d2818" stroke="#10b981" stroke-width="1"/>
+  <text x="660" y="673" font-family="Arial" font-size="10" fill="#cbd5e1">Strategy:</text>
+  <text x="660" y="682" font-family="monospace" font-size="8" fill="#94a3b8">if (ver &lt; target) migrate(data)</text>
+  
+  <!-- Data Flow Diagram -->
+  <rect x="60" y="710" width="1080" height="240" rx="8" fill="#1a3d2a" stroke="#34d399" stroke-width="2"/>
+  <text x="600" y="740" font-family="monospace" font-size="18" font-weight="bold" fill="#6ee7b7" text-anchor="middle">Core Services Data Flow</text>
+  
+  <text x="80" y="770" font-family="Arial" font-size="13" font-weight="bold" fill="#6ee7b7">User Action → Storage Pipeline:</text>
+  
+  <rect x="100" y="785" width="180" height="40" rx="4" fill="#1e3a2e" stroke="#10b981" stroke-width="1"/>
+  <text x="190" y="810" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">1. Click "Check In"</text>
+  
+  <text x="290" y="805" font-family="Arial" font-size="16" fill="#64748b">→</text>
+  
+  <rect x="310" y="785" width="180" height="40" rx="4" fill="#1e3a2e" stroke="#10b981" stroke-width="1"/>
+  <text x="400" y="810" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">2. State updates</text>
+  
+  <text x="500" y="805" font-family="Arial" font-size="16" fill="#64748b">→</text>
+  
+  <rect x="520" y="785" width="180" height="40" rx="4" fill="#1e3a2e" stroke="#10b981" stroke-width="1"/>
+  <text x="610" y="810" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">3. Storage saves</text>
+  
+  <text x="710" y="805" font-family="Arial" font-size="16" fill="#64748b">→</text>
+  
+  <rect x="730" y="785" width="180" height="40" rx="4" fill="#1e3a2e" stroke="#10b981" stroke-width="1"/>
+  <text x="820" y="810" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">4. localStorage</text>
+  
+  <text x="920" y="805" font-family="Arial" font-size="16" fill="#64748b">→</text>
+  
+  <rect x="940" y="785" width="160" height="40" rx="4" fill="#1e3a2e" stroke="#10b981" stroke-width="1"/>
+  <text x="1020" y="810" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">5. Event emit</text>
+  
+  <text x="80" y="855" font-family="Arial" font-size="13" font-weight="bold" fill="#6ee7b7">Event-Driven State Updates:</text>
+  
+  <rect x="100" y="870" width="200" height="40" rx="4" fill="#0d2818" stroke="#3b82f6" stroke-width="1"/>
+  <text x="200" y="895" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">State emits</text>
+  
+  <text x="310" y="890" font-family="Arial" font-size="16" fill="#64748b">→</text>
+  
+  <rect x="330" y="870" width="200" height="40" rx="4" fill="#0d2818" stroke="#3b82f6" stroke-width="1"/>
+  <text x="430" y="895" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">Listeners fire</text>
+  
+  <text x="540" y="890" font-family="Arial" font-size="16" fill="#64748b">→</text>
+  
+  <rect x="560" y="870" width="200" height="40" rx="4" fill="#0d2818" stroke="#3b82f6" stroke-width="1"/>
+  <text x="660" y="895" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">App.render()</text>
+  
+  <text x="770" y="890" font-family="Arial" font-size="16" fill="#64748b">→</text>
+  
+  <rect x="790" y="870" width="200" height="40" rx="4" fill="#0d2818" stroke="#3b82f6" stroke-width="1"/>
+  <text x="890" y="895" font-family="Arial" font-size="10" fill="#cbd5e1" text-anchor="middle">UI auto-updates</text>
+</svg>
