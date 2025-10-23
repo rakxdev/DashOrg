@@ -7,7 +7,7 @@ export const CONFIG = {
   // Application Info
   app: {
     name: 'Account Check-in Command Center',
-    version: '2.0.0',
+    version: '2.1.0',
     storageKey: 'accc-dashboard-state',
     credentialsKey: 'accc-credentials',
     historyKey: 'accc-history'
