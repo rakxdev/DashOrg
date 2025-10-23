@@ -26,36 +26,36 @@
 
 /* Filter Chips */
 .filter-chip {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0.25rem 0.625rem;
-  font-size: 0.75rem;
+  gap: 0.25rem !important;
+  padding: 0.25rem 0.625rem !important;
+  font-size: 0.75rem !important;
   font-weight: 500;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-border);
-  background: var(--color-bg-primary);
-  color: var(--color-text-primary);
+  border-radius: var(--radius-full) !important;
+  border: 1px solid var(--color-border) !important;
+  background: var(--color-bg-primary) !important;
+  color: var(--color-text-primary) !important;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease !important;
   user-select: none;
 }
 
 .filter-chip:hover {
-  border-color: var(--color-primary);
-  background: var(--color-primary-light);
-  transform: translateY(-1px);
+  border-color: var(--color-primary) !important;
+  background: var(--color-primary-light) !important;
+  transform: translateY(-1px) !important;
 }
 
 .filter-chip:active {
-  transform: translateY(0);
+  transform: translateY(0) !important;
 }
 
 .filter-chip.active {
-  background: var(--color-primary);
-  color: white;
-  border-color: var(--color-primary);
-  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+  background: var(--color-primary) !important;
+  color: white !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3) !important;
 }
 
 .filter-chip__icon {
@@ -78,21 +78,21 @@
 /* Clear Filters Button */
 .quick-filters__clear {
   margin-left: auto;
-  padding: 0.25rem 0.625rem;
-  font-size: 0.75rem;
+  padding: 0.25rem 0.625rem !important;
+  font-size: 0.75rem !important;
   font-weight: 500;
-  color: var(--color-text-secondary);
-  background: transparent;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  color: var(--color-text-secondary) !important;
+  background: transparent !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-md) !important;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease !important;
 }
 
 .quick-filters__clear:hover {
-  color: var(--color-error);
-  border-color: var(--color-error);
-  background: var(--color-error-light);
+  color: var(--color-error) !important;
+  border-color: var(--color-error) !important;
+  background: var(--color-error-light) !important;
 }
 
 /* Filter Groups */
