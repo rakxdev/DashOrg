@@ -1,0 +1,238 @@
+/**
+ * Bulk Operations Styles
+ */
+
+/* Bulk Selection Mode */
+body.bulk-selection-mode .credential-card {
+  cursor: pointer;
+  user-select: none;
+}
+
+body.bulk-selection-mode .credential-card:hover {
+  background: var(--color-bg-hover);
+}
+
+/* Bulk Checkbox */
+.bulk-select-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.75rem;
+  cursor: pointer;
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.bulk-select-checkbox:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Bulk Toolbar */
+.bulk-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-primary);
+  color: white;
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow-md);
+  animation: slideDown 0.3s ease;
+}
+
+.bulk-toolbar__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--container-max-width, 1400px);
+  margin: 0 auto;
+}
+
+.bulk-toolbar__info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.bulk-toolbar__count {
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-md);
+}
+
+.bulk-toolbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Toolbar buttons override */
+.bulk-toolbar .btn {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.bulk-toolbar .btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.bulk-toolbar .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bulk-toolbar .btn--danger {
+  background: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.bulk-toolbar .btn--danger:hover:not(:disabled) {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Selection indicator on cards */
+body.bulk-selection-mode .credential-card {
+  position: relative;
+}
+
+body.bulk-selection-mode .credential-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-lg);
+  pointer-events: none;
+  transition: border-color 0.2s ease;
+}
+
+body.bulk-selection-mode .credential-card:has(.bulk-select-checkbox:checked)::before {
+  border-color: var(--color-primary);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+body.bulk-selection-mode .credential-card:has(.bulk-select-checkbox:checked) {
+  background: var(--color-bg-hover);
+}
+
+/* Bulk selection button in header */
+.bulk-selection-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.bulk-selection-toggle:hover {
+  background: var(--color-bg-hover);
+  border-color: var(--color-primary);
+}
+
+.bulk-selection-toggle.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.bulk-selection-toggle__icon {
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bulk-toolbar__content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bulk-toolbar__info {
+    justify-content: space-between;
+  }
+
+  .bulk-toolbar__actions {
+    justify-content: stretch;
+  }
+
+  .bulk-toolbar__actions .btn {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .bulk-toolbar {
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bulk-toolbar__actions {
+    flex-direction: column;
+  }
+
+  .bulk-toolbar__actions .btn {
+    width: 100%;
+  }
+
+  .bulk-select-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+  }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .bulk-toolbar {
+  background: var(--color-primary-dark, #1e40af);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] body.bulk-selection-mode .credential-card:has(.bulk-select-checkbox:checked)::before {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .bulk-toolbar {
+    animation: none;
+  }
+  
+  body.bulk-selection-mode .credential-card::before {
+    transition: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .bulk-select-checkbox {
+    border: 2px solid currentColor;
+  }
+  
+  body.bulk-selection-mode .credential-card:has(.bulk-select-checkbox:checked)::before {
+    border-width: 3px;
+  }
+}

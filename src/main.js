@@ -10,6 +10,7 @@ import { sitesService } from './features/sites/sites.service.js';
 import { credentialsService } from './features/credentials/credentials.service.js';
 import { analyticsService } from './features/analytics/analytics.service.js';
 import { keyboardShortcuts } from './features/keyboard/keyboard-shortcuts.service.js';
+import { bulkOperations } from './features/bulk/bulk-operations.service.js';
 import { toast } from './shared/components/toast.js';
 import { formatDate, debounce } from './shared/constants.js';
 import { ComponentLoader } from './utils/component-loader.js';
@@ -50,6 +51,9 @@ class App {
       
       // Initialize keyboard shortcuts
       keyboardShortcuts.init();
+      
+      // Initialize bulk operations
+      bulkOperations.init();
       
       // Update date display
       this.updateDate();
@@ -294,6 +298,15 @@ class App {
     const markAllBtn = document.querySelector('[data-action="mark-all-done"]');
     if (markAllBtn) {
       markAllBtn.addEventListener('click', () => this.markAllDone());
+    }
+
+    // Bulk operations toggle button
+    const bulkToggleBtn = document.querySelector('[data-action="toggle-bulk-mode"]');
+    if (bulkToggleBtn) {
+      bulkToggleBtn.addEventListener('click', () => {
+        bulkOperations.toggleSelectionMode();
+        bulkToggleBtn.classList.toggle('active');
+      });
     }
   }
 
