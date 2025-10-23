@@ -9,6 +9,7 @@ import { storageService } from './core/storage.js';
 import { sitesService } from './features/sites/sites.service.js';
 import { credentialsService } from './features/credentials/credentials.service.js';
 import { analyticsService } from './features/analytics/analytics.service.js';
+import { keyboardShortcuts } from './features/keyboard/keyboard-shortcuts.service.js';
 import { toast } from './shared/components/toast.js';
 import { formatDate, debounce } from './shared/constants.js';
 import { ComponentLoader } from './utils/component-loader.js';
@@ -46,6 +47,9 @@ class App {
       
       // Subscribe to state changes
       this.subscribeToEvents();
+      
+      // Initialize keyboard shortcuts
+      keyboardShortcuts.init();
       
       // Update date display
       this.updateDate();

@@ -1,0 +1,252 @@
+/**
+ * Keyboard Shortcuts & Command Palette Styles
+ */
+
+/* Command Palette */
+.command-palette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
+}
+
+.command-palette__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease;
+}
+
+.command-palette__dialog {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  background: var(--color-bg-elevated);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+  animation: slideDown 0.2s ease;
+  overflow: hidden;
+}
+
+.command-palette__header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.command-palette__input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  background: transparent;
+  color: var(--color-text-primary);
+  outline: none;
+}
+
+.command-palette__input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.command-palette__results {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.command-palette__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.command-palette__item:last-child {
+  border-bottom: none;
+}
+
+.command-palette__item:hover,
+.command-palette__item--selected {
+  background: var(--color-bg-hover);
+}
+
+.command-palette__item-label {
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+}
+
+.command-palette__item-shortcut {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono, 'Courier New', monospace);
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-text-secondary);
+}
+
+.command-palette__empty {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-size: 0.875rem;
+}
+
+/* Shortcuts Help Modal */
+.shortcuts-help-modal .modal__dialog {
+  max-width: 700px;
+}
+
+.shortcuts-help-section {
+  margin-bottom: 2rem;
+}
+
+.shortcuts-help-section:last-child {
+  margin-bottom: 0;
+}
+
+.shortcuts-help-section__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.shortcuts-help-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.shortcuts-help-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius-md);
+  transition: background-color 0.15s ease;
+}
+
+.shortcuts-help-item:hover {
+  background: var(--color-bg-hover);
+}
+
+.shortcuts-help-item__label {
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+}
+
+.shortcuts-help-item__key {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono, 'Courier New', monospace);
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+/* Keyboard shortcut indicator */
+.shortcut-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.375rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono, 'Courier New', monospace);
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-text-tertiary);
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+}
+
+.shortcut-indicator:hover {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .command-palette__dialog {
+  background: var(--color-bg-elevated);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .command-palette__item-shortcut,
+[data-theme="dark"] .shortcuts-help-item__key,
+[data-theme="dark"] .shortcut-indicator {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .command-palette {
+    padding-top: 5vh;
+  }
+
+  .command-palette__dialog {
+    width: 95%;
+  }
+
+  .shortcuts-help-modal .modal__dialog {
+    width: 95%;
+    max-width: none;
+  }
+
+  .shortcuts-help-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .command-palette__backdrop,
+  .command-palette__dialog {
+    animation: none;
+  }
+}
